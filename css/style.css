@@ -39,7 +39,7 @@ img {
 /* Navbar */
 
 .navbar {
-  display: flexbox;
+  display: flex;
   align-items: center;
   /* for the main axis */
   justify-content: space-between;
