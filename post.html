@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/style.css">
 
@@ -16,7 +18,7 @@
   <header class="hero blog">
 
     <!-- Navbar -->
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar top">
 
       <!-- logo -->
 
@@ -35,11 +37,11 @@
         </ul>
       </nav>
     </div>
-          <!-- content -->
-         <div class="content">
-           <h1>Blog</h1>
-          </div>
-  
+    <!-- content -->
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+
   </header>
 
   <main>
@@ -49,19 +51,49 @@
         <i class="fas fa-user"></i> Posted by <strong> Adam Jemal </strong> | April 23, 2020
       </p>
       <img src="./image_resources/blog/blog1.jpg" alt="">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum recusandae corporis aliquid illo expedita consectetur, commodi odit? Reprehenderit modi qui alias distinctio sunt fugiat dignissimos, consequuntur libero earum mollitia perferendis.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat provident, est nulla explicabo quam officiis consequuntur tenetur facilis dolore maxime nam cumque harum sit repudiandae asperiores reprehenderit placeat vitae commodi, id rerum ipsa? Dignissimos deleniti labore ab unde earum ex provident nihil sit cupiditate impedit facere accusamus laudantium in doloremque rerum, dolore ipsa! Quo sit eum ipsam quae animi tempora.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod qui id minima officia cupiditate molestiae modi est, nihil rem, tempora architecto rerum doloribus delectus maxime quia non aut quos praesentium recusandae adipisci, quasi natus deleniti dolorum. Sequi, delectus quae ratione ab voluptate nisi molestias, harum ullam asperiores perspiciatis necessitatibus earum?</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum recusandae corporis aliquid illo expedita
+        consectetur, commodi odit? Reprehenderit modi qui alias distinctio sunt fugiat dignissimos, consequuntur libero
+        earum mollitia perferendis.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat provident, est nulla explicabo quam officiis
+        consequuntur tenetur facilis dolore maxime nam cumque harum sit repudiandae asperiores reprehenderit placeat
+        vitae commodi, id rerum ipsa? Dignissimos deleniti labore ab unde earum ex provident nihil sit cupiditate
+        impedit facere accusamus laudantium in doloremque rerum, dolore ipsa! Quo sit eum ipsam quae animi tempora.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod qui id minima officia cupiditate molestiae modi
+        est, nihil rem, tempora architecto rerum doloribus delectus maxime quia non aut quos praesentium recusandae
+        adipisci, quasi natus deleniti dolorum. Sequi, delectus quae ratione ab voluptate nisi molestias, harum ullam
+        asperiores perspiciatis necessitatibus earum?</p>
     </section>
   </main>
-    <footer class="footer bg-dark">
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-      </div>
-      <p>Copyright &copy; 2020 - Cassandra Capital</p>
-    </footer>
-  </body>
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 - Cassandra Capital</p>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+
+  </script>
+</body>
+
 </html>
